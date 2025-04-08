@@ -5,8 +5,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, Plane, X } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
+import Logo from "@/public/images/logo.png";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -27,7 +29,7 @@ export default function Navbar() {
           href="/"
           className="text-xl font-semibold tracking-tight text-primary flex items-center"
         >
-          <Plane className="text-primary" />
+          <Image src={Logo} alt="Logo" width={18} height={18} />
           Migra<span className="text-foreground">Path</span>
         </Link>
 
